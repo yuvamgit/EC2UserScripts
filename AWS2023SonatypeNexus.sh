@@ -2,9 +2,10 @@
 sudo yum update -y
 sudo yum install wget -y
 sudo yum install java-1.8.0-amazon-corretto -y
-sudo wget https://download.sonatype.com/nexus/3/nexus-3.53.0-01-unix.tar.gz -P /tmp
-sudo tar xvzf /tmp/nexus-3.53.0-01-unix.tar.gz -C /opt/
-sudo mv /opt/nexus-3.53.0-01/ /opt/nexus
+#sudo wget https://download.sonatype.com/nexus/3/nexus-3.53.0-01-unix.tar.gz -P /tmp
+sudo wget https://download.sonatype.com/nexus/3/nexus-3.69.0-02-java17-unix.tar.gz -P /tmp
+sudo tar xvzf /tmp/nexus-3.69.0-02-unix.tar.gz -C /opt/
+sudo mv /opt/nexus-3.69.0-02/ /opt/nexus
 sudo useradd nexus
 
 echo 'nexus ALL=(ALL) NOPASSWD:ALL' > sudo visudo
