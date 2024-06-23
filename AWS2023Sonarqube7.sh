@@ -10,9 +10,9 @@ sudo useradd sonar
 
 echo 'sonar ALL=(ALL) NOPASSWD:ALL' | EDITOR='tee -a'  visudo
 
-sudo chown -R sonar:sonar /opt/sonarqube*/
-sudo chmod 755 /opt/sonarqube*
-sudo ln -s /opt/sonarqube* /opt/sonarqube
+sudo chown -R sonar:sonar /opt/sonarqube-8*/
+sudo chmod 755 /opt/sonarqube-8*
+sudo ln -s /opt/sonarqube-8.9.10.61524 /opt/sonarqube
 
 echo '''vm.max_map_count=524288
 fs.file-max=131072
