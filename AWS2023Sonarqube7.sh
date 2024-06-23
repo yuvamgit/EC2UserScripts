@@ -2,16 +2,17 @@
 sudo yum update -y
 sudo yum install wget tree git -y
 cd /opt
-sudo yum install java-11-amazon-corretto -y
-wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-7.8.zip
-sudo unzip sonarqube-7.8.zip
+sudo yum install java-17-amazon-corretto -y
+wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-8.9.10.61524.zip
+
+sudo unzip sonarqube*.zip
 sudo useradd sonar
 
 echo 'sonar ALL=(ALL) NOPASSWD:ALL' | EDITOR='tee -a'  visudo
 
-sudo chown -R sonar:sonar /opt/sonarqube-7.8/
-sudo chmod 755 /opt/sonarqube-7.8
-sudo ln -s /opt/sonarqube-7.8 /opt/sonarqube
+sudo chown -R sonar:sonar /opt/sonarqube*/
+sudo chmod 755 /opt/sonarqube*
+sudo ln -s /opt/sonarqube* /opt/sonarqube
 
 echo '''vm.max_map_count=524288
 fs.file-max=131072
